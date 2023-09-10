@@ -1,0 +1,122 @@
+{
+  "name": "CarbonZero",
+  "slug": "CarbonZero",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "icon": "./assets/icon.png",
+  "userInterfaceStyle": "light",
+  "splash": {
+    "image": "./assets/splash.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#ffffff"
+  },
+  "assetBundlePatterns": [
+    "**/*"
+  ],
+  "ios": {
+    "supportsTablet": true,
+    "bundleIdentifier": "com.placeholder.appid"
+  },
+  "android": {
+    "adaptiveIcon": {
+      "foregroundImage": "./assets/adaptive-icon.png",
+      "backgroundColor": "#ffffff"
+    },
+    "package": "com.abr0212.CarbonZero",
+    "permissions": [
+      "android.permission.READ_EXTERNAL_STORAGE",
+      "android.permission.WRITE_EXTERNAL_STORAGE",
+      "android.permission.INTERNET"
+    ]
+  },
+  "web": {
+    "favicon": "./assets/favicon.png"
+  },
+  "extra": {
+    "eas": {
+      "projectId": "3ab57ae5-8fe2-4b04-9796-2939e847c94f"
+    }
+  },
+  "_internal": {
+    "isDebug": false,
+    "projectRoot": "c:\\Users\\AB\\Desktop\\carbon zero\\Expo app\\CarbonZero",
+    "dynamicConfigPath": null,
+    "staticConfigPath": "c:\\Users\\AB\\Desktop\\carbon zero\\Expo app\\CarbonZero\\app.json",
+    "packageJsonPath": "c:\\Users\\AB\\Desktop\\carbon zero\\Expo app\\CarbonZero\\package.json",
+    "autolinkedModules": [
+      "expo",
+      "expo-application",
+      "expo-constants",
+      "expo-file-system",
+      "expo-font",
+      "expo-keep-awake",
+      "expo-modules-core"
+    ],
+    "pluginHistory": {
+      "react-native-maps": {
+        "name": "react-native-maps",
+        "version": "UNVERSIONED"
+      },
+      "expo-ads-admob": {
+        "name": "expo-ads-admob",
+        "version": "UNVERSIONED"
+      },
+      "expo-apple-authentication": {
+        "name": "expo-apple-authentication",
+        "version": "UNVERSIONED"
+      },
+      "expo-contacts": {
+        "name": "expo-contacts",
+        "version": "UNVERSIONED"
+      },
+      "expo-notifications": {
+        "name": "expo-notifications",
+        "version": "UNVERSIONED"
+      },
+      "expo-updates": {
+        "name": "expo-updates",
+        "version": "UNVERSIONED"
+      },
+      "expo-branch": {
+        "name": "expo-branch",
+        "version": "UNVERSIONED"
+      },
+      "expo-document-picker": {
+        "name": "expo-document-picker",
+        "version": "UNVERSIONED"
+      },
+      "expo-facebook": {
+        "name": "expo-facebook",
+        "version": "UNVERSIONED"
+      },
+      "expo-system-ui": {
+        "name": "expo-system-ui",
+        "version": "UNVERSIONED"
+      },
+      "expo-splash-screen": {
+        "name": "expo-splash-screen",
+        "version": "UNVERSIONED"
+      },
+      "expo-navigation-bar": {
+        "name": "expo-navigation-bar",
+        "version": "UNVERSIONED"
+      },
+      "expo-file-system": {
+        "name": "expo-file-system",
+        "version": "15.4.3"
+      }
+    }
+  },
+  "sdkVersion": "49.0.0",
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "mods": {
+    "android": {},
+    "ios": {}
+  },
+  "androidStatusBar": {
+    "backgroundColor": "#ffffff"
+  }
+}
