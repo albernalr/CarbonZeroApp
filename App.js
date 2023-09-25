@@ -55,568 +55,571 @@ export default function App() {
     { Fecha: 'Noviembre 2026 - Octubre 2030', Actividad: 'Distribuir los beneficios entre las partes interesadas, mediante la aplicación de criterios transparentes y equitativos para asignar los ingresos generados por la venta de los bonos de carbono' }
   ]
 
+
+
+
   return (
-    <ImageBackground source={require('./assets/bg_pattern.jpg')} resizeMode='repeat' style={styles.imgbg} >
-      {valor === 0 &&
-        <>
-          <View styles={{ flex: 1 }}>
+        <ImageBackground source={require('./assets/bg_pattern.jpg')} resizeMode='default' style={styles.imgbg} >
+          {valor === 0 &&
+            <>
+              <View styles={{ flex: 1 }}>
 
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-              <Image style={styles.img1} source={require('./assets/logo_carbon_w.png')} />
-            </View>
-
-
-            <View style={styles.contenedor1}>
-
-              <View style={{ flex: 1, justifyContent: 'center', }}>
-                <View style={{ justifyContent: 'center' }}>
-                  <Text style={{ color: "white", textAlign: 'center', width: 300, fontSize: 17, padding: 7 }}>
-                    ¡Estamos emocionados de mostrarte cómo estás contribuyendo al futuro sostenible de nuestro planeta!
-                  </Text>
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                  <Image style={styles.img1} source={require('./assets/logo_carbon_w.png')} />
                 </View>
 
-                <TextInput onChangeText={text => setCorreo(text)}
-                  style={styles.input}
-                  placeholder='Ingresa tu correo'
-                />
-                <TextInput
-                  style={styles.input}
-                  placeholder='Ingresa tu contraseña'
-                />
-                <Text style={{ color: "blue", marginBottom: 7, padding: 7 }}>
-                  ¿Olvidaste tu contraseña?
-                </Text>
 
-                <TouchableOpacity style={styles.button1} onPress={onPress}     >
-                  <Text style={styles.buttonText}>
-                    Ingresa.
-                  </Text>
-                </TouchableOpacity>
+                <View style={styles.contenedor1}>
 
-                <TouchableOpacity style={styles.button1} onPress={onPresslog}      >
-                  <Text style={styles.buttonText}>
-                    Registro.
-                  </Text>
-                </TouchableOpacity>
-
-              </View>
-            </View>
-          </View>
-        </>}
-
-      {/* LOGINNNNNNNNNNNNNNNNNN */}
-
-      {valor === 'log' &&
-        <>
-          <View styles={{ flex: 1 }}>
-
-            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-              <Image style={styles.img1} source={require('./assets/logo_carbon_w.png')} />
-            </View>
-
-
-            <View style={styles.contenedor1}>
-
-              <View style={{ flex: 1, justifyContent: 'center', }}>
-                <View style={{ justifyContent: 'center' }}>
-                  <Text style={{ color: "white", textAlign: 'center', width: 300, fontSize: 23, padding: 7, textAlign: 'center' }}>
-                    Únete a nuestra comunidad y comienza a hacer la diferencia!
-                  </Text>
-                </View>
-
-                <TextInput onChangeText={text => setCorreo(text)}
-                  style={styles.input}
-                  placeholder='Ingresa tu correo'
-                />
-                <TextInput
-                  style={styles.input}
-                  placeholder='Ingresa tu contraseña'
-                />
-
-                <TextInput
-                  style={styles.input}
-                  placeholder='Ingresa tu contraseña de nuevo'
-                />
-
-                <TouchableOpacity style={styles.button1} onPress={onPress}      >
-                  <Text style={styles.buttonText}>
-                    Registro.
-                  </Text>
-                </TouchableOpacity>
-
-              </View>
-            </View>
-          </View>
-        </>}
-
-      {/* pagina 2//////////////////////////////////////////////// */}
-
-      {valor === 1 &&
-        <>
-          <View style={{ flex: 1, backgroundColor: 'rgba(7, 65, 79, 0.4)', margin: 15, borderRadius: 10, marginTop: 30 }}>
-
-            <ScrollView style={styles.scrollView}>
-
-              <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }} onPress={onPress2}   >
-                  <Text style={{ color: 'white', fontSize: 15 }}>
-                    Salir
-                  </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }}    >
-                  <Text style={{ color: 'white', fontSize: 15 }}>
-                    {correo}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-
-              <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text style={{ paddingBottom: 10, color: "white", fontSize: 40, flex: 1 }}>Mis Proyectos</Text>
-              </View>
-
-              <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text style={{ marginBottom: 10, color: "white", fontSize: 18, flex: 1, textAlign: 'justify', padding: 20 }}>¡Bienvenidos a nuestra página de seguimiento de proyectos! Aquí podrás encontrar información actualizada sobre el progreso de nuestros proyectos en curso. Haz clic en cada proyecto para ver más detalles y conocer más sobre su desarrollo. ¡Mantente al tanto de nuestros avances y descubre todo lo que estás logrando!</Text>
-                <Text>
-                  .
-                </Text>
-              </View>
-
-              {/* contenedores de valores /////////////////////////////////////////// */}
-
-              <View style={{ flex: 1, flexDirection: 'row' }}>
-
-                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                  <Image style={styles.imgProy} source={require('./assets/pr_1.png')} />
-                </View>
-
-                <View style={{ flex: 2, alignItems: 'center', flexDirection: 'column' }}>
-                  <Text style={{ marginTop: 10, color: "white", fontSize: 19, flex: 1 }}>
-                    CHONTA COROZO REDD+
-                  </Text>
-                  <View style={{ flex: 1 }}>
-                    <View style={{ backgroundColor: 'rgba(7, 65, 79, 0.4)', flexDirection: 'row', borderRadius: 3, paddingHorizontal: 7, flex: 1, alignItems: 'center' }}>
-
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <Text style={{ color: 'white', marginHorizontal: 10 }}>
-                        47.2% .
+                  <View style={{ flex: 1, justifyContent: 'center', }}>
+                    <View style={{ justifyContent: 'center' }}>
+                      <Text style={{ color: "white", textAlign: 'center', width: 300, fontSize: 17, padding: 7 }}>
+                        ¡Estamos emocionados de mostrarte cómo estás contribuyendo al futuro sostenible de nuestro planeta!
                       </Text>
+                    </View>
+
+                    <TextInput onChangeText={text => setCorreo(text)}
+                      style={styles.input}
+                      placeholder='Ingresa tu correo'
+                    />
+                    <TextInput
+                      style={styles.input}
+                      placeholder='Ingresa tu contraseña'
+                    />
+                    <Text style={{ color: "blue", marginBottom: 7, padding: 7 }}>
+                      ¿Olvidaste tu contraseña?
+                    </Text>
+
+                    <TouchableOpacity style={styles.button1} onPress={onPress}     >
+                      <Text style={styles.buttonText}>
+                        Ingresa.
+                      </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={styles.button1} onPress={onPresslog}      >
+                      <Text style={styles.buttonText}>
+                        Registro.
+                      </Text>
+                    </TouchableOpacity>
+
+                  </View>
+                </View>
+              </View>
+            </>}
+
+          {/* LOGINNNNNNNNNNNNNNNNNN */}
+
+          {valor === 'log' &&
+            <>
+              <View styles={{ flex: 1 }}>
+
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                  <Image style={styles.img1} source={require('./assets/logo_carbon_w.png')} />
+                </View>
+
+
+                <View style={styles.contenedor1}>
+
+                  <View style={{ flex: 1, justifyContent: 'center', }}>
+                    <View style={{ justifyContent: 'center' }}>
+                      <Text style={{ color: "white", textAlign: 'center', width: 300, fontSize: 23, padding: 7, textAlign: 'center' }}>
+                        Únete a nuestra comunidad y comienza a hacer la diferencia!
+                      </Text>
+                    </View>
+
+                    <TextInput onChangeText={text => setCorreo(text)}
+                      style={styles.input}
+                      placeholder='Ingresa tu correo'
+                    />
+                    <TextInput
+                      style={styles.input}
+                      placeholder='Ingresa tu contraseña'
+                    />
+
+                    <TextInput
+                      style={styles.input}
+                      placeholder='Ingresa tu contraseña de nuevo'
+                    />
+
+                    <TouchableOpacity style={styles.button1} onPress={onPress}      >
+                      <Text style={styles.buttonText}>
+                        Registro.
+                      </Text>
+                    </TouchableOpacity>
+
+                  </View>
+                </View>
+              </View>
+            </>}
+
+          {/* pagina 2//////////////////////////////////////////////// */}
+
+          {valor === 1 &&
+            <>
+              <View style={{ flex: 1, backgroundColor: 'rgba(7, 65, 79, 0.4)', margin: 15, borderRadius: 10, marginTop: 30,maxWidth: 450 }}>
+
+                <ScrollView style={styles.scrollView}>
+
+                  <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }} onPress={onPress2}   >
+                      <Text style={{ color: 'white', fontSize: 15 }}>
+                        Salir
+                      </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }}    >
+                      <Text style={{ color: 'white', fontSize: 15 }}>
+                        {correo}
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+
+                  <View style={{ flex: 1, alignItems: 'center' }}>
+                    <Text style={{ paddingBottom: 10, color: "white", fontSize: 40, flex: 1 }}>Mis Proyectos</Text>
+                  </View>
+
+                  <View style={{ flex: 1, alignItems: 'center' }}>
+                    <Text style={{ marginBottom: 10, color: "white", fontSize: 18, flex: 1, textAlign: 'justify', padding: 20 }}>¡Bienvenidos a nuestra página de seguimiento de proyectos! Aquí podrás encontrar información actualizada sobre el progreso de nuestros proyectos en curso. Haz clic en cada proyecto para ver más detalles y conocer más sobre su desarrollo. ¡Mantente al tanto de nuestros avances y descubre todo lo que estás logrando!</Text>
+                    <Text>
+                      .
+                    </Text>
+                  </View>
+
+                  {/* contenedores de valores /////////////////////////////////////////// */}
+
+                  <View style={{ flex: 1, flexDirection: 'row' }}>
+
+                    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                      <Image style={styles.imgProy} source={require('./assets/pr_1.png')} />
+                    </View>
+
+                    <View style={{ flex: 2, alignItems: 'center', flexDirection: 'column' }}>
+                      <Text style={{ marginTop: 10, color: "white", fontSize: 19, flex: 1 }}>
+                        CHONTA COROZO REDD+
+                      </Text>
+                      <View style={{ flex: 1 }}>
+                        <View style={{ backgroundColor: 'rgba(7, 65, 79, 0.4)', flexDirection: 'row', borderRadius: 3, paddingHorizontal: 7, flex: 1, alignItems: 'center' }}>
+
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <Text style={{ color: 'white', marginHorizontal: 10 }}>
+                            47.2% .
+                          </Text>
+
+                        </View>
+
+                      </View>
+
+                      <View style={{ flex: 1 }} >
+                        <TouchableOpacity style={styles.buttonproy1} onPress={onPress3}     >
+                          <Text style={styles.buttonProy}>
+                            Más información
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
 
                     </View>
 
                   </View>
 
-                  <View style={{ flex: 1 }} >
-                    <TouchableOpacity style={styles.buttonproy1} onPress={onPress3}     >
-                      <Text style={styles.buttonProy}>
-                        Más información
+                  {/* separacion */}
+
+                  <View style={{ flex: 1, flexDirection: 'row' }}>
+
+                    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                      <Image style={styles.imgProy} source={require('./assets/pr_2.png')} />
+                    </View>
+
+                    <View style={{ flex: 2, alignItems: 'center', flexDirection: 'column' }}>
+                      <Text style={{ marginTop: 10, color: "white", fontSize: 19, flex: 1 }}>
+                        KALIAWIRI REDD+
                       </Text>
-                    </TouchableOpacity>
+                      <View style={{ flex: 1 }}>
+                        <View style={{ backgroundColor: 'rgba(7, 65, 79, 0.4)', flexDirection: 'row', borderRadius: 3, paddingHorizontal: 7, flex: 1, alignItems: 'center' }}>
+
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <Text style={{ color: 'white', marginHorizontal: 10 }}>
+                            75% .
+                          </Text>
+
+                        </View>
+
+                      </View>
+
+                      <View style={{ flex: 1 }} >
+                        <TouchableOpacity style={styles.buttonproy1} onPress={onPressp2}     >
+                          <Text style={styles.buttonProy}>
+                            Más información
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
+
+                    </View>
+
                   </View>
+                  {/* separacion */}
 
-                </View>
+                  <View style={{ flex: 1, flexDirection: 'row' }}>
 
-              </View>
+                    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                      <Image style={styles.imgProy} source={require('./assets/pr_3.png')} />
+                    </View>
 
-              {/* separacion */}
+                    <View style={{ flex: 2, alignItems: 'center', flexDirection: 'column' }}>
+                      <Text style={{ marginTop: 10, color: "white", fontSize: 19, flex: 1 }}>
+                        BANAKALE - ISIMALI REDD+
 
-              <View style={{ flex: 1, flexDirection: 'row' }}>
-
-                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                  <Image style={styles.imgProy} source={require('./assets/pr_2.png')} />
-                </View>
-
-                <View style={{ flex: 2, alignItems: 'center', flexDirection: 'column' }}>
-                  <Text style={{ marginTop: 10, color: "white", fontSize: 19, flex: 1 }}>
-                    KALIAWIRI REDD+
-                  </Text>
-                  <View style={{ flex: 1 }}>
-                    <View style={{ backgroundColor: 'rgba(7, 65, 79, 0.4)', flexDirection: 'row', borderRadius: 3, paddingHorizontal: 7, flex: 1, alignItems: 'center' }}>
-
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <Text style={{ color: 'white', marginHorizontal: 10 }}>
-                        75% .
                       </Text>
+                      <View style={{ flex: 1 }}>
+                        <View style={{ backgroundColor: 'rgba(7, 65, 79, 0.4)', flexDirection: 'row', borderRadius: 3, paddingHorizontal: 7, flex: 1, alignItems: 'center' }}>
+
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
+                          </View>
+                          <Text style={{ color: 'white', marginHorizontal: 10 }}>
+                            15% .
+                          </Text>
+
+                        </View>
+
+                      </View>
+
+                      <View style={{ flex: 1 }} >
+                        <TouchableOpacity style={styles.buttonproy1} onPress={onPressp3}     >
+                          <Text style={styles.buttonProy}>
+                            Más información
+                          </Text>
+                        </TouchableOpacity>
+                      </View>
 
                     </View>
 
                   </View>
 
-                  <View style={{ flex: 1 }} >
-                    <TouchableOpacity style={styles.buttonproy1} onPress={onPressp2}     >
-                      <Text style={styles.buttonProy}>
-                        Más información
+                  {/* fin de los contenedores ////////////////////////////////////////////*/}
+
+                </ScrollView>
+              </View>
+            </>}
+
+          {/* pagina Proyecto 1//////////////////////////////////////////////// */}
+
+          {valor === 'p1' &&
+            <>
+              <View style={{ flex: 1, backgroundColor: 'rgba(7, 65, 79, 0.4)', margin: 15, borderRadius: 10, marginTop: 30, maxWidth: 450}}>
+
+                <ScrollView style={styles.scrollView}>
+
+                  {/* Texto superior (salir y correo) */}
+
+                  <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }} onPress={onPress}   >
+                      <Text style={{ color: 'white', fontSize: 15 }}>
+                        Volver
+                      </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }}    >
+                      <Text style={{ color: 'white', fontSize: 15 }}>
+                        {correo}
                       </Text>
                     </TouchableOpacity>
                   </View>
 
-                </View>
+                  {/* titulo////////////////////////////////// */}
 
-              </View>
-              {/* separacion */}
+                  <View style={{ flex: 1, alignItems: 'center' }}>
+                    <Text style={{ paddingBottom: 10, paddingTop: 10, color: "white", fontSize: 30, flex: 1 }}>CHONTA COROZO REDD+</Text>
+                  </View>
+                  {/* Imagen/////////////// */}
 
-              <View style={{ flex: 1, flexDirection: 'row' }}>
+                  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                    <Image style={styles.imgProy2} source={require('./assets/pr_1.png')} />
+                  </View>
 
-                <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                  <Image style={styles.imgProy} source={require('./assets/pr_3.png')} />
-                </View>
+                  <Text style={{ margin: 10, color: "white", fontSize: 14, flex: 1, textAlign: 'justify' }}>
+                    El proyecto lo compone el Consejo Comunitario de la Comunidad Negra del Alto Guapi, quien trabaja para proteger el bosque reduciendo y controlando la deforestación y degradación forestal. El consejo comunitario cuenta con un total aproximado de 1.823 personas, agrupados en 912 hombres y 911 mujeres aproximadamente. Actualmente se encuentra en proceso de validación y certificación por AENOR internacional, bajo la metodología del estándar de Verra. Este proyecto estima una reducción de emisiones de 128.830 TCO2e.
 
-                <View style={{ flex: 2, alignItems: 'center', flexDirection: 'column' }}>
-                  <Text style={{ marginTop: 10, color: "white", fontSize: 19, flex: 1 }}>
-                    BANAKALE - ISIMALI REDD+
-
+                    información general
                   </Text>
-                  <View style={{ flex: 1 }}>
-                    <View style={{ backgroundColor: 'rgba(7, 65, 79, 0.4)', flexDirection: 'row', borderRadius: 3, paddingHorizontal: 7, flex: 1, alignItems: 'center' }}>
+                  <Text>
+                    .
+                  </Text>
 
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "rgba(115, 200, 229, 1)", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <View style={{ width: 4, height: 10, backgroundColor: "white", marginTop: 4, marginBottom: 4, margin: 2, borderRadius: 3 }}>
-                      </View>
-                      <Text style={{ color: 'white', marginHorizontal: 10 }}>
-                        15% .
-                      </Text>
+                  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                    <Image style={styles.imgProy7} source={require('./assets/tab3.jpg')} />
+                  </View>
+                  {/* Tabla de valores /////////////////////////////////////////// */}
 
+                  <View style={styles.container4}>
+                    <View style={styles.row}>
+                      <Text style={styles.header}>Fecha</Text>
+                      <Text style={styles.header}>Actividad</Text>
                     </View>
-
+                    {data.map((item, index) => (
+                      <View key={index} style={styles.row}>
+                        <Text style={styles.cell}>{item.Fecha}</Text>
+                        <Text style={styles.cell}>{item.Actividad}</Text>
+                      </View>
+                    ))}
                   </View>
 
-                  <View style={{ flex: 1 }} >
-                    <TouchableOpacity style={styles.buttonproy1} onPress={onPressp3}     >
-                      <Text style={styles.buttonProy}>
-                        Más información
+                  {/* fin de los contenedores ////////////////////////////////////////////*/}
+
+                </ScrollView>
+              </View>
+            </>}
+
+          {/* pagina Proyecto 2//////////////////////////////////////////////// */}
+
+          {valor === 'p2' &&
+            <>
+              <View style={{ flex: 1, backgroundColor: 'rgba(7, 65, 79, 0.4)', margin: 15, borderRadius: 10, marginTop: 30, maxWidth: 450 }}>
+
+                <ScrollView style={styles.scrollView}>
+
+                  {/* Texto superior (salir y correo) */}
+
+                  <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }} onPress={onPress}   >
+                      <Text style={{ color: 'white', fontSize: 15 }}>
+                        Volver
+                      </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }}    >
+                      <Text style={{ color: 'white', fontSize: 15 }}>
+                        {correo}
                       </Text>
                     </TouchableOpacity>
                   </View>
 
-                </View>
+                  {/* titulo////////////////////////////////// */}
 
-              </View>
-
-              {/* fin de los contenedores ////////////////////////////////////////////*/}
-
-            </ScrollView>
-          </View>
-        </>}
-
-      {/* pagina Proyecto 1//////////////////////////////////////////////// */}
-
-      {valor === 'p1' &&
-        <>
-          <View style={{ flex: 1, backgroundColor: 'rgba(7, 65, 79, 0.4)', margin: 15, borderRadius: 10, marginTop: 30 }}>
-
-            <ScrollView style={styles.scrollView}>
-
-              {/* Texto superior (salir y correo) */}
-
-              <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }} onPress={onPress}   >
-                  <Text style={{ color: 'white', fontSize: 15 }}>
-                    Volver
-                  </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }}    >
-                  <Text style={{ color: 'white', fontSize: 15 }}>
-                    {correo}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-
-              {/* titulo////////////////////////////////// */}
-
-              <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text style={{ paddingBottom: 10, paddingTop: 10, color: "white", fontSize: 30, flex: 1 }}>CHONTA COROZO REDD+</Text>
-              </View>
-              {/* Imagen/////////////// */}
-
-              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Image style={styles.imgProy2} source={require('./assets/pr_1.png')} />
-              </View>
-
-              <Text style={{ margin: 10, color: "white", fontSize: 14, flex: 1, textAlign: 'justify' }}>
-                El proyecto lo compone el Consejo Comunitario de la Comunidad Negra del Alto Guapi, quien trabaja para proteger el bosque reduciendo y controlando la deforestación y degradación forestal. El consejo comunitario cuenta con un total aproximado de 1.823 personas, agrupados en 912 hombres y 911 mujeres aproximadamente. Actualmente se encuentra en proceso de validación y certificación por AENOR internacional, bajo la metodología del estándar de Verra. Este proyecto estima una reducción de emisiones de 128.830 TCO2e.
-
-                información general
-              </Text>
-              <Text>
-                .
-              </Text>
-
-              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Image style={styles.imgProy7} source={require('./assets/tab3.jpg')} />
-              </View>
-              {/* Tabla de valores /////////////////////////////////////////// */}
-
-              <View style={styles.container4}>
-                <View style={styles.row}>
-                  <Text style={styles.header}>Fecha</Text>
-                  <Text style={styles.header}>Actividad</Text>
-                </View>
-                {data.map((item, index) => (
-                  <View key={index} style={styles.row}>
-                    <Text style={styles.cell}>{item.Fecha}</Text>
-                    <Text style={styles.cell}>{item.Actividad}</Text>
+                  <View style={{ flex: 1, alignItems: 'center' }}>
+                    <Text style={{ paddingBottom: 10, paddingTop: 10, color: "white", fontSize: 30, flex: 1 }}>KALIAWIRI REDD+
+                    </Text>
                   </View>
-                ))}
-              </View>
+                  {/* Imagen/////////////// */}
 
-              {/* fin de los contenedores ////////////////////////////////////////////*/}
-
-            </ScrollView>
-          </View>
-        </>}
-
-      {/* pagina Proyecto 2//////////////////////////////////////////////// */}
-
-      {valor === 'p2' &&
-        <>
-          <View style={{ flex: 1, backgroundColor: 'rgba(7, 65, 79, 0.4)', margin: 15, borderRadius: 10, marginTop: 30 }}>
-
-            <ScrollView style={styles.scrollView}>
-
-              {/* Texto superior (salir y correo) */}
-
-              <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }} onPress={onPress}   >
-                  <Text style={{ color: 'white', fontSize: 15 }}>
-                    Volver
-                  </Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }}    >
-                  <Text style={{ color: 'white', fontSize: 15 }}>
-                    {correo}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-
-              {/* titulo////////////////////////////////// */}
-
-              <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text style={{ paddingBottom: 10, paddingTop: 10, color: "white", fontSize: 30, flex: 1 }}>KALIAWIRI REDD+
-                </Text>
-              </View>
-              {/* Imagen/////////////// */}
-
-              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Image style={styles.imgProy2} source={require('./assets/pr_2.png')} />
-              </View>
-
-              <Text style={{ margin: 10, color: "white", fontSize: 18, flex: 1, textAlign: 'justify' }}>
-                Siete resguardos indígenas de los pueblos sikuani y piapoco conforman este proyecto ubicado en Cumaribo, Vichada e Inírida, Guainía. Su nombre fue asignado por las comunidades haciendo alusión al árbol de la vida, de donde salieron todas las frutas o alimentos. KALIAWIRI REDD+ busca la protección de 358.065 hectáreas de bosque y beneficiar a más de 1.000 personas pertenecientes a los resguardos. Entre sus líneas de acción está el establecimiento de procesos educativos en gobernanza forestal, emprendimiento, igualdad de género, rescate de tradición cultural ancestral y alinderamiento territorial; así como reforestación, monitoreo comunitario e implementación de energías renovables y mejoramiento de infraestructura en comunicaciones, entre otros.
-
-                Información general
-              </Text>
-
-              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Image style={styles.imgProy7} source={require('./assets/tab2.jpg')} />
-              </View>
-
-              {/* Tabla de valores /////////////////////////////////////////// */}
-
-              <View style={styles.container4}>
-                <View style={styles.row}>
-                  <Text style={styles.header}>Fecha</Text>
-                  <Text style={styles.header}>Actividad</Text>
-                </View>
-                {data2.map((item, index) => (
-                  <View key={index} style={styles.row}>
-                    <Text style={styles.cell}>{item.fecha}</Text>
-                    <Text style={styles.cell}>{item.actividad}</Text>
+                  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                    <Image style={styles.imgProy2} source={require('./assets/pr_2.png')} />
                   </View>
-                ))}
-              </View>
 
-              {/* fin de los contenedores ////////////////////////////////////////////*/}
+                  <Text style={{ margin: 10, color: "white", fontSize: 18, flex: 1, textAlign: 'justify' }}>
+                    Siete resguardos indígenas de los pueblos sikuani y piapoco conforman este proyecto ubicado en Cumaribo, Vichada e Inírida, Guainía. Su nombre fue asignado por las comunidades haciendo alusión al árbol de la vida, de donde salieron todas las frutas o alimentos. KALIAWIRI REDD+ busca la protección de 358.065 hectáreas de bosque y beneficiar a más de 1.000 personas pertenecientes a los resguardos. Entre sus líneas de acción está el establecimiento de procesos educativos en gobernanza forestal, emprendimiento, igualdad de género, rescate de tradición cultural ancestral y alinderamiento territorial; así como reforestación, monitoreo comunitario e implementación de energías renovables y mejoramiento de infraestructura en comunicaciones, entre otros.
 
-            </ScrollView>
-          </View>
-        </>}
-
-      {/* pagina Proyecto 3//////////////////////////////////////////////// */}
-      
-      {valor === 'p3' &&
-        <>
-          <View style={{ flex: 1, backgroundColor: 'rgba(7, 65, 79, 0.4)', margin: 15, borderRadius: 10, marginTop: 30 }}>
-
-            <ScrollView style={styles.scrollView}>
-
-              {/* Texto superior (salir y correo) */}
-
-              <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
-                <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }} onPress={onPress}   >
-                  <Text style={{ color: 'white', fontSize: 15 }}>
-                    Volver
+                    Información general
                   </Text>
-                </TouchableOpacity>
 
-                <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }}    >
-                  <Text style={{ color: 'white', fontSize: 15 }}>
-                    {correo}
-                  </Text>
-                </TouchableOpacity>
-              </View>
-
-              {/* titulo////////////////////////////////// */}
-
-              <View style={{ flex: 1, alignItems: 'center' }}>
-                <Text style={{ paddingBottom: 10, paddingTop: 10, color: "white", fontSize: 30, flex: 1 }}>BANAKALE - ISIMALI REDD+
-
-                </Text>
-              </View>
-              {/* Imagen/////////////// */}
-
-              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Image style={styles.imgProy2} source={require('./assets/pr_3.png')} />
-              </View>
-
-              <Text style={{ margin: 10, color: "white", fontSize: 18, flex: 1, textAlign: 'justify' }}>
-                BANAKALE ISIMALI REDD+ está compuesto por los Resguardos Indígenas Llanura del Tomo y Santa Teresita del Tuparro, quienes trabajan en conjunto para proteger el bosque reduciendo y controlando la deforestación. Con las actividades de este proyecto se busca beneficiar a más de 3.000 personas pertenecientes a los resguardos y habitantes del territorio. Su nombre ‘BANAKALE’ viene de la lengua indígena del pueblo Sikuani, que significa la variedad de semillas que se encuentran en los conucos y en las huertas y la palabra “ISIMALI” significa trabajo, fuerza, dedicación, responsabilidad y liderazgo, lo que complementa el trabajo que realiza la comunidad a través de este proyecto REDD.
-
-                Información general
-              </Text>
-
-              <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Image style={styles.imgProy7} source={require('./assets/tab1.jpg')} />
-              </View>
-
-              {/* Tabla de valores /////////////////////////////////////////// */}
-
-              <View style={styles.container4}>
-                <View style={styles.row}>
-                  <Text style={styles.header}>Fecha</Text>
-                  <Text style={styles.header}>Actividad</Text>
-                </View>
-                {data3.map((item, index) => (
-                  <View key={index} style={styles.row}>
-                    <Text style={styles.cell}>{item.Fecha}</Text>
-                    <Text style={styles.cell}>{item.Actividad}</Text>
+                  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                    <Image style={styles.imgProy7} source={require('./assets/tab2.jpg')} />
                   </View>
-                ))}
+
+                  {/* Tabla de valores /////////////////////////////////////////// */}
+
+                  <View style={styles.container4}>
+                    <View style={styles.row}>
+                      <Text style={styles.header}>Fecha</Text>
+                      <Text style={styles.header}>Actividad</Text>
+                    </View>
+                    {data2.map((item, index) => (
+                      <View key={index} style={styles.row}>
+                        <Text style={styles.cell}>{item.fecha}</Text>
+                        <Text style={styles.cell}>{item.actividad}</Text>
+                      </View>
+                    ))}
+                  </View>
+
+                  {/* fin de los contenedores ////////////////////////////////////////////*/}
+
+                </ScrollView>
               </View>
+            </>}
 
-              {/* fin de los contenedores ////////////////////////////////////////////*/}
+          {/* pagina Proyecto 3//////////////////////////////////////////////// */}
 
-            </ScrollView>
-          </View>
-        </>}
+          {valor === 'p3' &&
+            <>
+              <View style={{ flex: 1, backgroundColor: 'rgba(7, 65, 79, 0.4)', margin: 15, borderRadius: 10, marginTop: 30 , maxWidth: 450}}>
 
-    </ImageBackground>
+                <ScrollView style={styles.scrollView}>
+
+                  {/* Texto superior (salir y correo) */}
+
+                  <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }} onPress={onPress}   >
+                      <Text style={{ color: 'white', fontSize: 15 }}>
+                        Volver
+                      </Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={{ padding: 10, textAlign: 'right', maxWidth: 2000 }}    >
+                      <Text style={{ color: 'white', fontSize: 15 }}>
+                        {correo}
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+
+                  {/* titulo////////////////////////////////// */}
+
+                  <View style={{ flex: 1, alignItems: 'center' }}>
+                    <Text style={{ paddingBottom: 10, paddingTop: 10, color: "white", fontSize: 30, flex: 1 }}>BANAKALE - ISIMALI REDD+
+
+                    </Text>
+                  </View>
+                  {/* Imagen/////////////// */}
+
+                  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                    <Image style={styles.imgProy2} source={require('./assets/pr_3.png')} />
+                  </View>
+
+                  <Text style={{ margin: 10, color: "white", fontSize: 18, flex: 1, textAlign: 'justify' }}>
+                    BANAKALE ISIMALI REDD+ está compuesto por los Resguardos Indígenas Llanura del Tomo y Santa Teresita del Tuparro, quienes trabajan en conjunto para proteger el bosque reduciendo y controlando la deforestación. Con las actividades de este proyecto se busca beneficiar a más de 3.000 personas pertenecientes a los resguardos y habitantes del territorio. Su nombre ‘BANAKALE’ viene de la lengua indígena del pueblo Sikuani, que significa la variedad de semillas que se encuentran en los conucos y en las huertas y la palabra “ISIMALI” significa trabajo, fuerza, dedicación, responsabilidad y liderazgo, lo que complementa el trabajo que realiza la comunidad a través de este proyecto REDD.
+
+                    Información general
+                  </Text>
+
+                  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                    <Image style={styles.imgProy7} source={require('./assets/tab1.jpg')} />
+                  </View>
+
+                  {/* Tabla de valores /////////////////////////////////////////// */}
+
+                  <View style={styles.container4}>
+                    <View style={styles.row}>
+                      <Text style={styles.header}>Fecha</Text>
+                      <Text style={styles.header}>Actividad</Text>
+                    </View>
+                    {data3.map((item, index) => (
+                      <View key={index} style={styles.row}>
+                        <Text style={styles.cell}>{item.Fecha}</Text>
+                        <Text style={styles.cell}>{item.Actividad}</Text>
+                      </View>
+                    ))}
+                  </View>
+
+                  {/* fin de los contenedores ////////////////////////////////////////////*/}
+
+                </ScrollView>
+              </View>
+            </>}
+
+        </ImageBackground>
   )
 };
 
